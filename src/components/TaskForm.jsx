@@ -31,7 +31,7 @@ function TaskForm() {
     } else {
       dispatch(addTask({ ...task, id: uuid() }));
     }
-    navigate("/");
+    navigate("/task-list");
   };
 
   useEffect(() => {
