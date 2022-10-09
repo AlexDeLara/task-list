@@ -3,14 +3,20 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = [
   {
     id: '1',
-    title: "Task 1",
-    description: "Task 1 description",
+    title: "Call Mom",
+    description: "Weekly family call and make plans for next Friday evening",
     completed: false,
   },
   {
     id: '2',
-    title: "Task 2",
-    description: "Task 2 description",
+    title: "Buy monitor",
+    description: "Buy a new monitor to improve work productivity (Saturn shop has some good deals coming next week)",
+    completed: false,
+  },
+  {
+    id: '3',
+    title: "Fix car",
+    description: "Send car to the garage and fix oil leaks",
     completed: false,
   },
 ];

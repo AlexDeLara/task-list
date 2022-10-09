@@ -38,25 +38,29 @@ function TaskForm() {
     if (params.id) {
       const foundTask = tasks.find((auxTask) => auxTask.id === params.id);
       setTask({...foundTask});
-    }
-  }, []);
+     }
+  }, [params.id, tasks]);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="bg-neutral-900 p-4 flex flex-col gap-2">
+      <label htmlFor="title" className="font-bold text-md">Task</label>
       <input
         name="title"
         type="text"
-        placeholder="title"
+        placeholder="Task title"
         onChange={handleChange}
         value={task.title}
+        className="rounded text-black p-2"
       ></input>
+      <label htmlFor="description" className="font-bold text-md mt-4">Description</label>
       <textarea
         name="description"
-        placeholder="description"
+        placeholder="Task description"
         onChange={handleChange}
         value={task.description}
+        className="rounded text-black p-2 overflow-scroll"
       ></textarea>
-      <button>Save</button>
+      <button className="bg-indigo-600 rounded px-2 py-1 mt-4 hover:bg-indigo-500">Save</button>
     </form>
   );
 }

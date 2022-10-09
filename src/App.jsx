@@ -4,13 +4,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<TasksList />}></Route>
-        <Route path="/create-task" element={<TaskForm />}></Route>
-        <Route path="/edit-task/:id" element={<TaskForm />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="bg-black h-screen text-white flex items-center justify-center">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<TasksList />}></Route>
+          <Route path="/create-task" element={<TaskForm />}></Route>
+          <Route path="/edit-task/:id" element={<TaskForm />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
