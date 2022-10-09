@@ -16,7 +16,7 @@ function TasksList() {
         <h1 className="font-bold text-2xl">Tasks: {tasksState.length}</h1>
         <Link to="/create-task" className="bg-indigo-600 px-2 py-1 rounded text-sm">Create Task</Link>
       </header>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
         {tasksState.map((task) => (
           <div
             key={task.id}
